@@ -1,0 +1,30 @@
+<div class="container">
+  <ngx-spinner type="ball-atom" loadingText="Processing ...">
+  </ngx-spinner>
+  <div class="mb-3">
+    <h4 class="mt-2"  [appNgStyle]="'red'" [defaultFontColor] = "'#17a2b8'">If you want to create a new todo</h4>
+    <button  class="btn btn-outline-info mt-2" routerLink="/addtodo">Create New Todo</button>
+  </div>
+  <span class="badge badge-light">{{ time | mydate }}</span>
+  <span class="badge badge-light ml-3">Summa = {{ sumArr | mySum }}</span>
+  <table class="table table-striped mt-3">
+    <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Title</th>
+      <th scope="col">Completed</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete</th>
+    </thead>
+    <tbody>
+    <tr *ngFor="let todo of todos; let i = index">
+      <th  appMyClass scope="row">{{ i + 1 }}</th>
+      <td [appMyFontStyle] = "{'font-family': 'Comic Sans MS', 'text-transform': 'capitalize'}">{{ todo.title }}</td>
+      <td>{{ todo.completed}}</td>
+      <td><button class="btn btn-outline-danger" routerLink="/todo/{{ todo.id }}">Edit</button></td>
+      <td><button  class="btn btn-outline-danger" (click)="onDelete(todo.id)">Delete</button></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<!-- /.container-->
