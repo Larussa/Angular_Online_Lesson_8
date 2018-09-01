@@ -10,7 +10,7 @@ import { NgxSpinnerService } from "ngx-spinner";
   styleUrls: ['./todos.component.css']
 })
 export class TodosComponent implements OnInit {
-  private todos: Todo[];
+  public todos: Todo[];
   time: number = Date.now();
   sumArr: number[] = [1, -3, 7, 10, -18];
 
