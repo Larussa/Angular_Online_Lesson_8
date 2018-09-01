@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { TodosService } from "../../services/todos.service";
 import { Router } from "@angular/router";
-import { Todo } from "../../models/Todo";
 import { ToastrService } from "ngx-toastr";
 import { NgxSpinnerService } from "ngx-spinner";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
+import { Todo } from "../../models/Todo";
+import { TodosService } from "../../services/todos.service";
 
 
 @Component({

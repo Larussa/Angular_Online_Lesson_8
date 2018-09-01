@@ -4,7 +4,6 @@ import { AuthService } from "../../services/auth.service";
 import { ToastrService } from "ngx-toastr";
 import { NgxSpinnerService } from "ngx-spinner";
 import { Router } from "@angular/router";
-import { BehaviorSubject } from "rxjs/internal/BehaviorSubject";
 
 @Component({
   selector: 'app-registration',
