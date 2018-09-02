@@ -7,13 +7,14 @@ import { Directive, ElementRef, Renderer2, Input } from '@angular/core';
   }
 })
 export class MyClassDirective {
+  @Input('appMyClass') myClass;
 
   constructor(
     private elRef: ElementRef,
+    private renderer: Renderer2
   ) { }
 
   onClick() {
-    this.elRef.nativeElement.style.fontSize = "20px";
-    this.elRef.nativeElement.style.color = "red";
+    this.renderer.addClass(this.elRef.nativeElement, this.myClass);
   }
 }

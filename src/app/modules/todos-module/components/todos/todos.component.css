@@ -6,3 +6,7 @@
 .black-overlay {
   position: fixed !important;
 }
+.my-class {
+  font-size: 20px;
+  color: red;
+}
